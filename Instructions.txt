@@ -1,0 +1,17 @@
+================X==================X====================X==============================
+FontAwesome Icons Instruction 
+
+What’s in the Download?
+The web-focused Font Awesome Package contains the following directories and files:
+
+Files & Folders	    What They Are	            Where You Should Start
+
+/css	        Stylesheets for Web Fonts	            all.css
+/js         	SVG with JavaScript	                    all.js
+/less	        Less pre-processor	                fontawesome.less
+/scss	        Sass pre-processor	                fontawesome.scss
+/sprites        SVG sprites	                            solid.svg
+/svgs	        Individual SVG for each icon	    individual *.svg icons
+/webfonts	    Web Font files used with CSS	        See /css
+
+====================X===============X===================X=============================
