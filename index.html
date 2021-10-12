@@ -29,7 +29,7 @@
 
    <!-- Favicon Link -->
  
-   <link rel="icon" href="img/favicon.png">
+   <link rel="icon" href="./assets/Logo/WTH black.png">
 
    <!-- FontAwesome CDN -->
    <link href="./assets/Icons/css/fontawesome.css" rel="stylesheet">
@@ -61,21 +61,33 @@
   
   <script src="three.r119.min.js"></script>
 <script src="vanta.net.min.js"></script>
-<script>
-
-</script>
   
 <body>
   <!-- Loader -->
   <div id="loader"></div>
-  <!-- Container -->
-  <section>
-  <div class="container back">
-    <div class="row">
-      <div class="col">Coming Soon . . .</div>
+  <!-- NavBar -->
+  <nav class="navbar sticky-xl-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand navTitle" href="#">
+        <img src="./assets/Logo/WTH white-cropped.png" class="navLogo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navStyle" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active homeTitle" aria-current="page" href="#">Home</a>
+          <a class="nav-link featureTitle" href="#">Schedule</a>
+          <a class="nav-link featureTitle" href="#">FAQ</a>
+          <a class="nav-link featureTitle" href="#">Problem Statement</a>
+          <a class="nav-link featureTitle" href="#">Mentors</a>
+          <button type="button" class="btn btn-light featureTitle" style="width: 8rem;"><span class="btn-txt">WEBINAR</span></button>
+        </div>
+      </div>
     </div>
-  </div>
-  </section>
+  </nav>
+
+  <h1 style="text-align: center;">make the navbar transparent after putting bgImage</h1>
 
 
 <!-- <div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right" style="cursor: pointer;">x</span></p></div> -->

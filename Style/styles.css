@@ -30,3 +30,44 @@
       animation: fadeinall 1s normal both;
       -webkit-animation-delay: 0.3s;
       animation-delay: 0.3s; }
+
+.navLogo {
+  width: 7rem;
+  padding: 10px;
+}
+.homeTitle {
+  margin-left: 17.7rem;
+  font-size: 1.2vw;
+}
+
+.featureTitle {
+  margin-left: 2rem;
+  font-size: 1.2vw;
+}
+
+.navTitle {
+  margin-left: 8rem;
+  font-size: 1.4vw;
+}
+
+@media screen and (max-width:1200px) {
+  .homeTitle, .featureTitle, .navTitle{
+    margin-left: 1rem;
+  }
+  .navTitle {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .homeTitle, .featureTitle, .navTitle{
+    margin-left: 2rem;
+    font-size: 4vw;
+  }
+  .navTitle {
+    margin-left: 1rem;
+  }
+  .btn-txt {
+    font-size: 2.5vw;
+  }
+}
