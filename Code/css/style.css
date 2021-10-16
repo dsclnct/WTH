@@ -93,6 +93,8 @@ canvas{
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  position: absolute;
+  z-index:0;
 }
 
 @keyframes fadeinall {
@@ -172,4 +174,8 @@ font-size: 1.4vw;
 
 .bg-custom{
   background: transparent;
+}
+
+.overlay {
+  z-index: 2rem;
 }
