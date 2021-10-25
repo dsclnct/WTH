@@ -8,7 +8,7 @@
 ### Part 3 (CountDown) :green_circle: Done by Aryan
 ### Part 4 (What The H*ck Intro Video) :red_circle:
 ### Part 5 (Our Speakers Section) :green_circle: Done by Aryan
-### PArt 6 (Prizes Section) :red_circle:
+### Part 6 (Prizes Section) :red_circle:
 ### Part 7 (Sponsor Section) :green_circle: Done by Aryan
 ### Part 8 (Contact Us) :red_circle:
 ### Part 9 (Background) :red_circle:
