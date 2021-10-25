@@ -237,3 +237,18 @@ font-size: 1.4vw;
   margin-left: -10rem;
   }
 }
+
+.countDownStyle {
+  text-align: center;
+  /* background-color: red; */
+}
+
+.countFont {
+  font-size: 2vw;
+  color: #fff;
+}
+
+.countDown {
+  font-size: 3vw;
+  color: white;
+}
