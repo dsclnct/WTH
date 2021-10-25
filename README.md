@@ -28,7 +28,7 @@
 ### :red_circle:
 
 ## Hosting - (Shouryam, Aryan and Awantika)
-### :green_circle:
+### :red_circle:
 
 # Site Hosted on (Temporary) : https://wthack.netlify.app
 # Inspired by : https://hackp.kerala.gov.in/
