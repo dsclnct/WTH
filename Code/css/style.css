@@ -512,3 +512,20 @@ font-size: 1.4vw;
   left: calc(80% - 5px);
   top: 2rem;
 }
+
+.bannerSec {
+  padding: 5rem;
+}
+
+@media screen and (max-width: 900px) {
+ 
+ .bannerImg {
+   padding:2rem;
+ }
+ .bannerClg {
+   font-size: 4.5vw;
+ }
+ .bannerClub {
+   font-size: 4vw;
+ }
+}
