@@ -214,16 +214,17 @@ font-size: 1.4vw;
   .columnHead {
     display: flex;
     flex-direction: column;
+    padding: 3.5rem;
   }
 
   .aboutHead {
     font-size: medium;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .aboutPara {
     font-size: small;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .aboutImg {
@@ -234,6 +235,5 @@ font-size: 1.4vw;
   .aboutImgTwo {
     width: 11rem;
   margin-left: -10rem;
-  padding-top: 4rem;
   }
 }
