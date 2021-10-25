@@ -1,6 +1,6 @@
 # The Part which is in :red_circle: is incomplete 
 # The Part which is in :green_circle: is complete
-### Kindly update the Readme Everytime you are with a section (Updated @Mon, 25 October 2021)
+### Kindly update the Readme Everytime you are done with a section (Updated @Mon, 25 October 2021)
 
 ## Home Section - (Everyone is Going to contribute)
 ### Part 0 (Customized Navigation Bar) :green_circle: Done by Aryan
