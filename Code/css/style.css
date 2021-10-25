@@ -252,3 +252,20 @@ font-size: 1.4vw;
   font-size: 3vw;
   color: white;
 }
+
+@media screen and (max-width:900px) {
+  .cdStyles {
+    display: flex;
+    flex-direction: column;
+  }
+  .countFont {
+    font-size: 6vw;
+    padding: 20px;
+  }
+  .countDown {
+    font-size: larger;
+  }
+  .headCount {
+    font-size: 3vw;
+  }
+}
