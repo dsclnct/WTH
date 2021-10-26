@@ -77,6 +77,9 @@
         overflow: hidden;
       }
 
+      .active1{
+        display: block;
+      }
 
     </style>
   </head>
@@ -137,7 +140,7 @@
     </nav>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq-section">
       <div class="faq-head container">
         <h4 class="my-3" style="color: rgb(209, 209, 111)">&lt;faq/&gt;</h4>
         <h2 class="my-4" style="color: #fff">Frequently Asked Questions</h2>
@@ -146,15 +149,15 @@
         </h5>
       </div>
 
-      <div class="faq-main container flex my-5">
+      <div class=" faq-main container flex my-5">
         <!-- FAQ-1 -->
-        <div class="container" id="faq-1">
+        <div class="faq container" id="faq-1">
           <div
             class="my-3"
-            id="faq-btn-1"
+            id="faq-btn-2"
             style="grid-template-columns: 4fr 3fr"
           >
-            <button class="faq-btn btn btn-lg" >FAQ-1</button>
+            <button class="faq-btn btn btn-lg">FAQ-2</button>
           </div>
           <div class="faqText my-2 container" style="color: #fff">
             <p>
@@ -171,7 +174,7 @@
 
         <!-- FAQ-2 -->
 
-        <div class="container" id="faq-2">
+        <div class="faq container" id="faq-2">
           <div
             class="my-3"
             id="faq-btn-2"
@@ -194,7 +197,7 @@
 
         <!-- FAQ-3 -->
 
-        <div class="container" id="faq-3">
+        <div class="faq container" id="faq-3">
           <div
             class="my-3"
             id="faq-btn-3"
@@ -217,7 +220,7 @@
 
         <!-- FAQ-4 -->
 
-        <div class="container" id="faq-4">
+        <div class="faq container" id="faq-4">
           <div
             class="my-3"
             id="faq-btn-4"
@@ -240,7 +243,7 @@
 
         <!-- FAQ-5 -->
 
-        <div class="container" id="faq-5">
+        <div class="faq container" id="faq-5">
           <div
             class="my-3"
             id="faq-btn-5"
@@ -263,7 +266,7 @@
 
         <!-- FAQ-6 -->
 
-        <div class="container" id="faq-6">
+        <div class="faq container" id="faq-6">
           <div
             class="my-3"
             id="faq-btn-6"
@@ -284,7 +287,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Footer -->
 
@@ -314,7 +318,17 @@
     <!-- Other Scripts -->
 
     <script>
-     
+     const faqMain = document.getElementsByClassName('faq');
+     let i;
+      
+     for(i=0; i<faqMain; i++){
+       faqMain[i].addEventListener('click', function(){
+         this.classList.toggle('active1');
+         console.log('clicked');
+       })
+     }
+    
+
     </script>
 
     <!-- JQuery CDN  -->
