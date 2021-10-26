@@ -16,7 +16,7 @@
 ### Part 10 (Footer) :green_circle: Done by Aryan
 
 ## FAQ - (Shouryam and Awantika)
-### :red_circle:
+### :green_circle: Done by Shouryam
 
 ## Schedule - (Aryan and Awantika)
 ### :red_circle:
