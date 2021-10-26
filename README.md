@@ -19,7 +19,7 @@
 ### :green_circle: Done by Shouryam
 
 ## Schedule - (Aryan and Awantika)
-### :red_circle:
+### :green_circle : Done by Awantika
 
 ## Problem Statement - (Vidushi and Prkhar)
 ### :red_circle:
