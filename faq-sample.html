@@ -1,0 +1,108 @@
+<!-- This is a sample file created to test the functionality of faq-accordion buttons -->
+<!-- Please do not delete until the final publish of site. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+
+    <style>
+        .faq{
+            overflow: hidden;
+            background: #444;
+            color: white;
+        }
+
+        .faq__label,
+        .faq__content{
+            padding: 14px 20px;
+        }
+
+        .faq__label{
+            border: 2px dashed #fff;
+            border-radius: 5px;
+            display: block;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq__label:hover{
+            border-style: solid;
+        }
+
+        .faq__label::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            width: 12px;
+            height: 6px; /*height should be half of the width*/
+            background: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+            background-size: contain;
+            transition: transform 0.4s;
+        }
+
+        .faq__content{
+            line-height: 1.6;
+            font-size: 0.85em;
+            display: none;
+        }
+
+        .faq__input{
+            display: none;
+        }
+
+        .faq__input:checked ~ .faq__content{
+            display: block;
+        }
+
+        .faq__input:checked ~ .faq__label::after{
+            transform : translateY(-50%) rotate(0.5turn)
+        }
+    </style>
+</head>
+<body>
+    <section class="faq-section">
+        <div class="container faq">
+            <div>
+                <input type="checkbox" name="faq-accordion" id="faq-1" class="faq__input">
+                <label for="faq-1" class="faq__label">FAQ-1</label>
+                <div class="faq__content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque alias excepturi. Natus sunt nostrum perspiciatis cupiditate rem deleniti. Facere vel enim dolores nesciunt ipsam, explicabo soluta incidunt recusandae mollitia labore dignissimos itaque quis vero?
+                    </p>
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" name="faq-accordion" id="faq-2" class="faq__input">
+                <label for="faq-2" class="faq__label">FAQ-1</label>
+                <div class="faq__content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque alias excepturi. Natus sunt nostrum perspiciatis cupiditate rem deleniti. Facere vel enim dolores nesciunt ipsam, explicabo soluta incidunt recusandae mollitia labore dignissimos itaque quis vero?
+                    </p>
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" name="faq-accordion" id="faq-3" class="faq__input">
+                <label for="faq-3" class="faq__label">FAQ-1</label>
+                <div class="faq__content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque alias excepturi. Natus sunt nostrum perspiciatis cupiditate rem deleniti. Facere vel enim dolores nesciunt ipsam, explicabo soluta incidunt recusandae mollitia labore dignissimos itaque quis vero?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
