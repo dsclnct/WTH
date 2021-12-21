@@ -524,4 +524,18 @@ canvas {
   }
 }
 
-/* Footer */
+.Img {
+  border-radius: 8px;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+@media screen and (max-width:900px) {
+
+.colOne {
+  text-align: center;
+ }
+ .aboutParaOne {
+   text-align: center;
+ }
+}
