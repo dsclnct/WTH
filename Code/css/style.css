@@ -156,7 +156,8 @@ canvas {
 }
 
 .bg-custom {
-  background: transparent;
+  background: #111;
+  opacity: 0.9 ;
 }
 
 .overlay {
@@ -184,36 +185,34 @@ canvas {
 .faq-tag {
   font-size: 1.1rem;
 }
+
 .accordion {
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  width: 100%;
-  border: 1px dashed #edeff2;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  margin: 10px 0 10px;
-  text-indent: 10px;
-  padding: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  z-index: 3;
+  justify-content: center;
+  padding: 5em;
 }
-/* .accordion-button::after {
-  flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-left: auto;
-  content: "";
-  background-image: url("D:\WTH-main\Code\assets\Logo\plus_adobespark.png");
-  background-repeat: no-repeat;
-  background-size: 1.25rem;
-  transition: transform .2s ease-in-out;
-} */
+.accordion-item {
+  width: 50rem;
+}
+
+.timeHead {
+  text-align: center; 
+  font-size: 8vh; 
+  color: #f8f8f8;
+}
+@media screen and (max-width: 900px) {
+  .accordion {
+    padding: 7em;
+  }
+  .accordion-item {
+    max-width: 20rem;
+  }
+  .timeHead {
+    font-size: 4vh;
+  }
+}
 
 #overlay {
   position: relative;
@@ -300,138 +299,6 @@ canvas {
   }
   .headCount {
     font-size: 3vw;
-  }
-}
-
-/* Corousel */
-
-.Cardss {
-  padding: 2rem;
-  cursor: pointer;
-}
-
-.our-team {
-  padding: 30px 0 40px;
-  margin-bottom: 30px;
-  background-color: #121212;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px;
-}
-
-.our-team .picture {
-  display: inline-block;
-  height: 130px;
-  width: 130px;
-  margin-bottom: 50px;
-  z-index: 1;
-  position: relative;
-}
-
-.our-team .picture::before {
-  content: "";
-  width: 100%;
-  height: 0;
-  border-radius: 50%;
-  background-color: grey;
-  position: absolute;
-  bottom: 135%;
-  right: 0;
-  left: 0;
-  opacity: 0.9;
-  transform: scale(3);
-  transition: all 0.3s linear 0s;
-}
-
-.our-team:hover .picture::before {
-  height: 100%;
-}
-
-.our-team .picture::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: grey;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.name {
-  color: rgb(218, 218, 218);
-}
-
-.our-team .picture img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  transform: scale(1);
-  transition: all 0.9s ease 0s;
-}
-
-.our-team:hover .picture img {
-  box-shadow: 0 0 0 14px #f7f5ec;
-  transform: scale(0.7);
-}
-
-.our-team .title {
-  display: block;
-  font-size: 15px;
-  color: #fff;
-  text-transform: capitalize;
-}
-
-.our-team .social {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: grey;
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  transition: all 0.5s ease 0s;
-}
-
-.our-team:hover .social {
-  bottom: 0;
-}
-
-.our-team .social li {
-  display: inline-block;
-}
-
-.our-team .social li a {
-  display: block;
-  padding: 10px;
-  font-size: 17px;
-  color: white;
-  transition: all 0.3s ease 0s;
-  text-decoration: none;
-}
-
-.our-team .social li a:hover {
-  color: #1369ce;
-  background-color: #f7f5ec;
-}
-
-.Cards {
-  padding: 2rem;
-}
-
-.speakHead {
-  color: #f1f1f1;
-  padding: 2rem;
-}
-
-@media screen and (max-width: 900px) {
-  .Cardss {
-    padding: 4rem;
-  }
-  .Cards {
-    padding: 0;
   }
 }
 
@@ -527,7 +394,10 @@ canvas {
 }
 
 .bannerSec {
-  padding: 5rem;
+  padding: 3rem;
+}
+.imgBanner {
+  padding: 2rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -540,22 +410,34 @@ canvas {
   .bannerClub {
     font-size: 4vw;
   }
+  .bannerSec {
+    padding: 2rem;
+  }
+  .imgBanner {
+    padding: 1rem;
+  }
 }
 .container {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
-  background-color: #111;
 }
 .timeline {
-  width: 80%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  padding: 3rem;
+}
+@media screen and (max-width:900px) {
+  .timeline {
+    padding: 1rem;
+    /* position: absolute; */
+    margin-right:4%;
+  }
 }
 
 .timeline ul {
