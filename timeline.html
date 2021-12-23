@@ -29,6 +29,9 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" media="screen" href="/Code/css/style.css" />
+    <!-- AOS STYLE stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Bootstrap Style CDN -->
 
     <link
@@ -49,6 +52,8 @@
     <!-- SVG with JavaScript -->
 
     <script defer src="/Code/assets/Icons/js/all.js"></script>
+    
+
   </head>
 
   <body style="background-color: #121212; overflow-x: hidden">
@@ -83,12 +88,12 @@
     </div>
   </div>
 </nav>  
-    <h2 class="my-3 timeHead">&lt;timeline/&gt;</h2>
+    <h2 class="my-3 timeHead" data-aos="zoom-in">&lt;timeline/&gt;</h2>
     <div class="container">
       <div class="timeline">
         <ul>
           <li>
-            <div class="timeline-content">
+            <div class="timeline-content" >
               <h3 class="date">20th may, 2010</h3>
               <h1>Heading 1</h1>
               <p>
@@ -98,8 +103,8 @@
               </p>
             </div>
           </li>
-          <li>
-            <div class="timeline-content">
+          <li >
+            <div class="timeline-content" >
               <h3 class="date">20th may, 2010</h3>
               <h1>Heading 2</h1>
               <p>
@@ -109,8 +114,8 @@
               </p>
             </div>
           </li>
-          <li>
-            <div class="timeline-content">
+          <li >
+            <div class="timeline-content" data-aos="flip-up">
               <h3 class="date">20th may, 2010</h3>
               <h1>Heading 3</h1>
               <p>
@@ -121,7 +126,7 @@
             </div>
           </li>
           <li>
-            <div class="timeline-content">
+            <div class="timeline-content" data-aos="flip-up">
               <h3 class="date">20th may, 2010</h3>
               <h1>Heading 4</h1>
               <p>
@@ -170,6 +175,15 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:300,
+        duration: 1000
+      });
+    </script>
 
     <!-- Main Script -->
     <script src="Code\js\main.js"></script>
