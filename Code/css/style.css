@@ -91,6 +91,25 @@ canvas {
     z-index: -1;
   }
 }
+
+@keyframes  slideInFromLeft{
+  0%{
+      transform:translateX(-100%)
+  }
+  100%{
+      transform: translateX(0);
+  }
+}
+
+@keyframes  slideInFromRight{
+  0%{
+      transform:translateX(100%)
+  }
+  100%{
+      transform: translateX(0);
+  }
+}
+
 #loader {
   color: white;
   opacity: 1;
@@ -186,15 +205,21 @@ canvas {
   font-size: 1.1rem;
 }
 
-.accordion {
+/* .accordion {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 5em;
-}
+} */
+
+/* .accordion-button {
+  color: #fff;
+} */
+
 .accordion-item {
   width: 50rem;
+  background: transparent;
 }
 
 .timeHead {
@@ -202,13 +227,34 @@ canvas {
   font-size: 8vh; 
   color: #f8f8f8;
 }
+
+.faq-text{
+  text-align: left; 
+  margin-left: 220px;  
+  color: #f8f8f8;
+}
 @media screen and (max-width: 900px) {
-  .accordion {
-    padding: 7em;
+  .faq-content{
+            
+    /* display: flex; */
+    justify-content: center; 
+     /* align-items: center; */
+    min-height: 100vh;
+    
+}
+  .accordion{
+    width: 800px;
+    justify-content: center; 
   }
-  .accordion-item {
-    max-width: 20rem;
+  .accordion .content-box{
+    /* width: 800px; */
+    justify-content: center;
   }
+  .faq-text{
+    text-align: center;
+    margin: auto;
+  }
+
   .timeHead {
     font-size: 4vh;
   }
@@ -442,7 +488,7 @@ canvas {
 }
 .timeline ul li {
   padding: 20px;
-  background-color: #1e1f22;
+  /* background-color: #1e1f22; */
   color: white;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -483,12 +529,28 @@ canvas {
     position: relative;
     margin-bottom: 50px;
   }
+  .timeline ul li:first-child {
+    float: left;
+    clear: right;
+    animation: slideInFromLeft 1s ease-in;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+
   .timeline ul li:nth-child(odd) {
     float: left;
     clear: right;
     transform: translateX(-30px);
     border-radius: 20px 0px 20px 20px;
   }
+  .timeline ul li:nth-child(2) {
+    float: left;
+    clear: right;
+    animation: slideInFromRight 1s ease-in;
+    transform: translateX(30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+
   .timeline ul li:nth-child(even) {
     float: right;
     clear: left;

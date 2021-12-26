@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .faq-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+        }
+
+        .accordion{
+            width: 800px;
+        }
+
+        .accordion .content-box{
+            position: relative;
+            margin: 10px 20px;
+        }
+
+        .accordion .content-box .label{
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion .content-box .label::before{
+            content: '+';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+        .accordion .content-box.active .label::before{
+            content: '-';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+        .accordion .content-box .content{
+            position: relative;
+            padding: 10px;
+            display: none;
+            transition: 1s;
+        }
+        .accordion .content-box.active .content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-content">
+        <div class="accordion">
+            <div class="content-box">
+                <div class="label">List One</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="label">List One</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="content-box">
+            <div class="label">List One</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="label">List One</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const accordion = document.getElementsByClassName('content-box');
+
+        for(i=0; i<accordion.length; i++){
+            accordion[i].addEventListener('click', function (){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+</html>
