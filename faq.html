@@ -28,6 +28,9 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" media="screen" href="/Code/css/style.css" />
+
+    <!-- AOS stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Bootstrap Style CDN -->
 
     <link
@@ -48,6 +51,99 @@
     <!-- SVG with JavaScript -->
 
     <script defer src="/Code/assets/Icons/js/all.js"></script>
+
+    <style>
+
+  @keyframes  slideInFromLeft{
+    0%{
+      transform:translateX(-100%)
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes  slideInFromRight{
+   0%{
+      transform:translateX(100%)
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+      .faq-content{
+            
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            min-height: 100vh;
+            
+        }
+      .accordion{
+          width: 800px;
+          /* margin-left: 220px; */
+      }
+
+      .accordion .content-box{
+          position: relative;
+          margin: 10px;
+      }
+
+      .accordion .content-box .label{
+          color: #f8f8f8;
+          position: relative;
+          padding: 30px;
+          margin: 20px;
+          cursor: pointer;
+          border: 1px dashed white;
+      }
+
+      .accordion .content-box:nth-child(odd){
+        animation: slideInFromLeft 1s ease-in;
+      }
+
+      .accordion .content-box:nth-child(even){
+        animation: slideInFromRight 1s ease-in;
+      }
+
+      .accordion .content-box.active .label,
+      .accordion .content-box .label:hover{
+        border: 1px solid white;
+      }
+
+      .accordion .content-box .label::before{
+          content: '+';
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          font-size: 1.5em;
+      }
+      .accordion .content-box.active .label::before{
+          content: '-';
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          font-size: 1.5em;
+      }
+      .accordion .content-box .content{
+          position: relative;
+          padding: 0px 20px;
+          height: 0;
+          overflow: hidden;
+          overflow-y: hidden;
+          transition: 0.5s;
+          color: #f8f8f8;
+      }
+      .accordion .content-box .content p{
+        padding: 15px;
+      }
+      .accordion .content-box.active .content{
+          height: 150px;
+      }
+  </style>
+
   </head>
 
   <body  style="background-color: #121212; overflow-x: hidden;">
@@ -104,61 +200,91 @@
         </div>
       </div>
     </nav>
-    <h2 class="my-3" style="text-align: center; font-size: 8vh; color: #f8f8f8;">&lt;FAQ's/&gt;</h2>
+    <h2 class="my-3" style="text-align: center; font-size: 8vh; color: #f8f8f8;">&lt;faq/&gt;</h2>
+
+    <h4 class="my-3 faq-text" >Frequently Asked Questions</h4>
+    <p class="my-3 faq-text" >You can browse the topics you are looking for :</p>
 
     <!-- FAQ -->
-    
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Accordion Item #1
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+
+    <div class="faq-content">
+      <div class="accordion">
+        <div class="content-box">
+          <div class="label">List One</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Accordion Item #2
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+        <div class="content-box">
+          <div class="label">List Two</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #3
-          </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        <div class="content-box">
+          <div class="label">List Three</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-            Accordion Item #4
-          </button>
-        </h2>
-        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        <div class="content-box">
+          <div class="label">List Four</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
         </div>
-      </div><div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-            Accordion Item #5
-          </button>
-        </h2>
-        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        <div class="content-box">
+          <div class="label">List Five</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="label">List Six</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="label">List seven</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="label">List eight</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="label">List nine</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="label">List ten</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="label">List eleven</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="label">List twelve</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dignissimos ab alias et ad, ratione sequi nostrum, eaque officiis eos, autem voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ullam ducimus sed deleniti, accusamus veniam natus officiis dolore molestiae eaque vero vitae, assumenda eos ad non veritatis delectus numquam voluptas sequi voluptatum.</p>
+          </div>
         </div>
       </div>
     </div>
+    
+    
 
 
     <!-- Footer -->
@@ -187,7 +313,19 @@
     </div>
 
     <!-- Other Scripts -->
+    <script>
+      const accordion = document.getElementsByClassName('content-box');
 
+      for(i=0; i<accordion.length; i++){
+          accordion[i].addEventListener('click', function (){
+              this.classList.toggle('active')
+          })
+      }
+
+      // AOS Script
+
+      AOS.init();
+  </script>
 
     <!-- JQuery CDN  -->
 
