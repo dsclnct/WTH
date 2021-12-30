@@ -134,7 +134,7 @@ canvas {
   padding: 10px;
 }
 .homeTitle {
-  margin-left: 17.7rem;
+  margin-left: 29.7rem;
   font-size: 1.2vw;
 }
 
@@ -144,7 +144,7 @@ canvas {
 }
 
 .navTitle {
-  margin-left: 8rem;
+  margin-left: 10rem;
   font-size: 1.4vw;
 }
 
@@ -597,4 +597,15 @@ canvas {
  .aboutParaOne {
    text-align: center;
  }
+}
+
+.sponTxt {
+  text-align: center;
+  color: gold;
+  padding: 2rem;
+}
+
+.tobe {
+  text-align: center;
+  color: silver;
 }

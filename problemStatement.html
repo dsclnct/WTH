@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WhatTheH*ck!!</title>
+
+    <!-- Meta Tags -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="theme-color" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <meta
+      name="description"
+      content="particles.js is a lightweight JavaScript library for creating particles."
+    />
+    <meta name="author" content="Vincent Garreau" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" media="screen" href="/Code/css/style.css" />
+
+    <!-- AOS stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap Style CDN -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <!-- Favicon Link -->
+
+    <link rel="icon" href="/Code/assets/favicon/favicon.ico" />
+
+    <!-- FontAwesome CDN -->
+    <link href="/Code/assets/Icons/css/fontawesome.css" rel="stylesheet" />
+
+    <link href="/Code/assets/Icons/css/brands.css" rel="stylesheet" />
+
+    <link href="/Code/assets/Icons/css/solid.css" rel="stylesheet" />
+    <!-- SVG with JavaScript -->
+
+    <script defer src="/Code/assets/Icons/js/all.js"></script>
+
+    <style>
+
+  @keyframes  slideInFromLeft{
+    0%{
+      transform:translateX(-100%)
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes  slideInFromRight{
+   0%{
+      transform:translateX(100%)
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+      .faq-content{
+            
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            min-height: 100vh;
+            
+        }
+      .accordion{
+          width: 800px;
+          /* margin-left: 220px; */
+      }
+
+      .accordion .content-box{
+          position: relative;
+          margin: 10px;
+      }
+
+      .accordion .content-box .label{
+          color: #f8f8f8;
+          position: relative;
+          padding: 30px;
+          margin: 20px;
+          cursor: pointer;
+          border: 1px dashed white;
+      }
+
+      .accordion .content-box:nth-child(odd){
+        animation: slideInFromLeft 1s ease-in;
+      }
+
+      .accordion .content-box:nth-child(even){
+        animation: slideInFromRight 1s ease-in;
+      }
+
+      .accordion .content-box.active .label,
+      .accordion .content-box .label:hover{
+        border: 1px solid white;
+      }
+
+      .accordion .content-box .label::before{
+          content: '+';
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          font-size: 1.5em;
+      }
+      .accordion .content-box.active .label::before{
+          content: '-';
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          font-size: 1.5em;
+      }
+      .accordion .content-box .content{
+          position: relative;
+          padding: 0px 20px;
+          height: 0;
+          overflow: hidden;
+          overflow-y: hidden;
+          transition: 0.5s;
+          color: #f8f8f8;
+      }
+      .accordion .content-box .content p{
+        padding: 15px;
+      }
+      .accordion .content-box.active .content{
+          height: 150px;
+      }
+  </style>
+
+  </head>
+
+  <body  style="background-color: #121212; overflow-x: hidden;">
+    <!-- particles.js container -->
+    <div id="loader"></div>
+
+    <!-- Navbar -->
+    <nav
+      class="navbar sticky-xl-top navbar-expand-lg navbar-dark bg-custom"
+      style="z-index: 3"
+    >
+      <div class="container-fluid bg-custom">
+        <a class="navbar-brand navTitle" href="./index.html">
+          <img src="/Code/assets/Logo/WTH white-cropped.png" class="navLogo" />
+        </a>
+        <div
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="border: none"
+        >
+          <div id="nav-icon2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse navStyle" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a
+              class="nav-link homeTitle"
+              aria-current="page"
+              href="./index.html"
+              >Home</a
+            >
+            <a class="nav-link featureTitle" href="./timeline.html">Schedule</a>
+            <a class="nav-link active featureTitle" href="./faq.html">FAQ</a>
+            <a class="nav-link featureTitle" href="#">Problem Statement</a>
+            <a class="nav-link featureTitle" href="#">Mentors</a>
+            <button
+              type="button"
+              class="btn btn-light featureTitle"
+              style="width: 8rem"
+            >
+              <span class="btn-txt">WEBINAR</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h2 class="my-3" style="text-align: center; font-size: 8vh; color: #f8f8f8;">&lt;Problem Statements/&gt;</h2>
+    <h2 class="my-3" style="text-align: center; font-size: 8vh; color: #f8f8f8;">To be announced . . .</h2>
+    
+
+
+    <!-- Footer -->
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Problem Statement</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Mentors</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">© What The H*ck 2021 GDSC : LNCT</p>
+      </footer>
+    </div>
+
+    <!-- Other Scripts -->
+    <script>
+      const accordion = document.getElementsByClassName('content-box');
+
+      for(i=0; i<accordion.length; i++){
+          accordion[i].addEventListener('click', function (){
+              this.classList.toggle('active')
+          })
+      }
+
+      // AOS Script
+
+      AOS.init();
+  </script>
+
+    <!-- JQuery CDN  -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Popper CDN -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main Script -->
+    <script src="Code\js\main.js"></script>
+  </body>
+</html>
