@@ -134,7 +134,7 @@ canvas {
   padding: 10px;
 }
 .homeTitle {
-  margin-left: 29.7rem;
+  margin-left: 14.7rem;
   font-size: 1.2vw;
 }
 
@@ -329,6 +329,10 @@ canvas {
 .countDown {
   font-size: 2.7vw;
   color: white;
+}
+
+.headCount {
+  font-size: 5vh;
 }
 
 @media screen and (max-width: 900px) {
