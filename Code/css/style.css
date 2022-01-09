@@ -110,6 +110,30 @@ canvas {
   }
 }
 
+#tagLineWTH {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 4s steps(15) infinite alternate,
+    blink 800ms steps(15) infinite normal;
+  border-right: 5px solid black;
+}
+@keyframes typewriter {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: rgb(253, 248, 248);
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
 #loader {
   color: white;
   opacity: 1;
