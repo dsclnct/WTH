@@ -4,6 +4,10 @@ body, html {
 }
 
 .homeSec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .homeContent {
@@ -34,7 +38,7 @@ body, html {
     transition: ease-in-out 1s;
     text-decoration: none;
     cursor: pointer;
-    margin: 2rem;
+    margin: 2rem 0;
     color: #fff;
 }
 .btnHack:hover {
@@ -56,4 +60,33 @@ body, html {
 
 .homeImg {
     width: 20rem;
+}
+
+/* Home Mobile */
+
+@media screen and (max-width:900px) {
+    .homeSec {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .homeDate {
+        font-size: 3vh;
+    }
+    .homeTitle {
+        font-size: 5vh;
+    }
+    .homeImg {
+        padding: 2rem 0;
+        width: 15rem;
+    }
+
+    .btnHack {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .btnDis {
+        width: 100%;
+        margin: 0;
+    }
 }
