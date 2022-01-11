@@ -2,3 +2,58 @@ body, html {
     background-color: #000;
     overflow-x: hidden;
 }
+
+.homeSec {
+}
+
+.homeContent {
+    padding: 3rem;
+}
+
+.homeDate {
+    font-size: 4vh;
+    font-weight: 400;
+    color: rgb(89, 170, 218);
+}
+
+.homeTitle {
+    font-size: 12vh;
+    color: #fff;
+}
+
+.homeHash {
+    text-decoration: underline;
+    padding-top: 2rem;
+    color: rgb(226, 226, 226);
+}
+
+.btnHack, .btnDis {
+    border: 0.5px solid white;
+    text-align: center;
+    width: 60%;
+    transition: ease-in-out 1s;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2rem;
+    color: #fff;
+}
+.btnHack:hover {
+    border-radius: 8px;
+    transition: ease-in-out 1s;
+}
+
+.btnDis:hover {
+    background-color: #fff;
+    transition: ease-in-out 1s;
+    color: #414141;
+    border-radius: 8px;
+}
+.btnTitle {
+    font-size: 3vh;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.homeImg {
+    width: 20rem;
+}
