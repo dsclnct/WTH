@@ -149,6 +149,6 @@ body, html {
         padding: 1.2rem;
     }
     .aboutImg {
-        width: 100%;
+        display:none;
     }
 }
