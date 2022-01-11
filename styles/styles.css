@@ -98,6 +98,8 @@ body, html {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    /* background-color: red; */
+    z-index: 3;
     /* gap: 12rem; */
 }
 
@@ -105,6 +107,7 @@ body, html {
     border-radius: 50%;
     padding: 3rem;
     width: 30rem;
+    padding-left: 8rem;
 }
 
 .aboutTitle {
@@ -118,4 +121,34 @@ body, html {
     color: #f8f8f8;
     width: 80%;
     font-weight: 400;
+}
+
+#layer1{
+    position: absolute;
+    width:100%;
+    height: auto;
+    padding: 3rem;
+    overflow: hidden;
+}
+
+#layer1 {
+    background-color: #000;
+}
+
+/* About Mobile */
+
+@media screen and (max-width:900px) {
+    .aboutSec {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .aboutPara {
+        width: 100%;
+        font-size:2vh;
+        padding: 1.2rem;
+    }
+    .aboutImg {
+        width: 100%;
+    }
 }
