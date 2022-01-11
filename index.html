@@ -1,235 +1,78 @@
-<!DOCTYPE html>
+
+
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>WhatTheH*ck!!</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Meta Tags -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="theme-color" content="">
-  <meta property="og:title" content="" />
-  <meta property="og:description" content="" />
-  <meta property="og:image" content="" />
-  <meta name="twitter:card" content="">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
-  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
-  <meta name="author" content="Vincent Garreau" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="/Code/css/style.css">
-   <!-- Bootstrap Style CDN -->
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
 
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-   <!-- Favicon Link -->
- 
-   <link rel="icon" href="/Code/assets/favicon/favicon.ico">
-
-    <!-- FontAwesome CDN -->
-    <link href="/Code/assets/Icons/css/fontawesome.css" rel="stylesheet">
-
-    <link href="/Code/assets/Icons/css/brands.css" rel="stylesheet">
-    
-    <link href="/Code/assets/Icons/css/solid.css" rel="stylesheet">
-    <!-- SVG with JavaScript -->
-    <script defer src="/Code/assets/Icons/js/all.js"></script>
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body style="background-color: #121212; overflow-x: hidden;">
-<!-- particles.js container -->
-<div id="loader"></div>
-
- <!-- Navbar -->
- <nav class="navbar sticky-xl-top navbar-expand-lg navbar-dark bg-custom" style="z-index:3">
-  <div class="container-fluid bg-custom">
-    <a class="navbar-brand navTitle" href="./index.html">
-      <img src="/Code/assets/Logo/WTH white-cropped.png" class="navLogo">
-    </a>
-    <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
-      <div id="nav-icon2">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div id="snowflakes-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-3">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown px-3">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                        </li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
     </div>
-    <div class="collapse navbar-collapse navStyle" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active homeTitle" aria-current="page" href="./index.html">Home</a>
-        <a class="nav-link featureTitle" href="./timeline.html">Schedule</a>
-        <a class="nav-link featureTitle" href="./faq.html">FAQ</a>
-        <a class="nav-link featureTitle" href="/problemStatement.html">Problem Statement</a>
-        <!-- <a class="nav-link featureTitle" href="#">Mentors</a>-->
-        <button type="button" class="btn btn-light featureTitle" style="width: 8rem;"><span class="btn-txt">Apply For Mentor</span></button> 
-        <button type="button" class="btn btn-outline-light featureTitle" style="width: 8rem;"><span class="btn-txt">Sponsor Us</span></button> 
-      </div>
-    </div>
-  </div>
-</nav>  
-
-<!-- Banner -->
-
-<div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col-md-auto .d-flex flex-column align-items-center justify-content-center bannerSec">
-      <h5 data-aos="fade-down"
-      data-aos-anchor="#example-anchor"
-      data-aos-offset="100"
-      data-aos-duration="2000" class="text-start bannerClg" id="tagLineWTH" > <code style="color:  #80d4ff;">< Google Developer Student Club / ></code> </h5>
-      <div data-aos="fade-left"
-      data-aos-anchor="#example-anchor"
-      data-aos-offset="100"
-      data-aos-duration="2000" class="bannerImg">
-        <img src="./Code/assets/Logo/WTH white-cropped.png" class="img-fluid imgBanner" alt="LogoWTH">
-      </div>
-      <!-- <h5 data-aos="fade-up"
-      data-aos-anchor="#example-anchor"
-      data-aos-offset="100"
-      data-aos-duration="2000" class="text-end bannerClub"><code style="color: rgb(154, 149, 228)">
-       < Google Developer Students Club, Bhopal / >
-      </code></h5> -->
-    </div>
-  </div>
-</div>
-
-<!-- About Us -->
-<div class="row align-items-center columnHead">
-  <div data-aos="flip-down" data-aos-duration="2000" class="col">
-    <h2 class="aboutPara">
-      <code id="aboutUsHead" style="color: #80d4ff);">
-        < a b o u t u s / >
-      </code>
-    </h2>
-    <h2 class="aboutHead" style="color: #80d4ff">
-      What the Hack
-    </h2>
-    <h6 class="aboutPara" style="color:#fff">
-      is 48 hours online hackathon organized by GDSC-LNCT that aims to provide a platform to young and innovative minds who want to showcase their skills and enhance their knowledge by gaining experience by solving real-world problems.
-    </h6>
-  </div>
-  <div class="col">
-    <h6  data-aos-duration="2000" data-aos="flip-up" style="color:white;" class="aboutPara">
-      From technical gearheads who like alone in the corner analyzing algorithms and creating puzzles of codes to the newcomers who are willing to enter the cyberspace we got you covered for by participating in this Hackathon you will learn how to pitch, program, & present. So what are you waiting for join in for amazing experience!!!
-    </h6>
-  </div>
-  <div class="col imgSecAbout" style="text-align: center">
-    <img data-aos-duration="2000"  data-aos="zoom-out-left" src="/Code/assets/Images/sign-post-gdacf27780_1280-removebg-preview.png" class="img-fluid aboutImg" alt="About Image">
-  </div>
-</div>
-
-<!-- Countdown Timer -->
-
-<div class="row justify-content-center align-items-center cdStyles">
-  <div class="col-5 text-center text-lg-center countFont">
-    <h1 class="headCount">
-      <code style="color: #80d4ff">
-        < w h a t - t h e - h a c k / >
-      </code>
-    </h1>
-  Starts In 
-  </div>
-  <div class="col-sm-5 countDownStyle">
-    <p id="demo" class="countDown"></p>
-  </div>
-</div>
-
-<!-- About Us
-<div class="row d-flex align-items-center columnHead">
-  <div class="col imgSecAbout" style="text-align: center">
-    <img  data-aos-duration="2000" data-aos="flip-right" src="http://pngimg.com/uploads/laptop/laptop_PNG101795.png" class="img-fluid Img" alt="About Image">
-  </div>
-  <div class="col colOne">
-    <h2 class="aboutHead" style="color: #80d4ff)">
-      < B r i e f I n t r o / >
-    </h2>
-    <h5 class="aboutParaOne" style="color: white;">
-      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    </h5>
-  </div>
-</div> -->
-
-<!-- Sponsor -->
-
-<div class="sponsor">
-  <div class="goldspo">
-    <h1 class="sponTxt">
-      Our Sponsors
-    </h1>
-    <div class="spoLogo">
-      <h3 class="tobe">
-        To be Announced . . .
-      </h3>
-    </div>
-  <!-- </div>
-  <div class="goldspo">
-    <h1 class="sponTxt">
-      Silver Sponsor
-    </h1>
-    <div class="spoLogo">
-      <h3 class="tobe">
-        To be Announced . . .
-      </h3>
-    </div>
-  </div>
-  <div class="goldspo">
-    <h1 class="sponTxt">
-      Bronze Sponsor
-    </h1>
-    <div class="spoLogo">
-      <h3 class="tobe">
-        To be Announced . . .
-      </h3>
-    </div>
-  </div> -->
-</div>
-
-<!-- Twitter -->
-
-
-<!-- Footer -->
-
-<div class="container p-5">
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item" ><a href="#" class="nav-link px-2 text-muted" style="color: #80d4ff">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Schedule</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQ</a></li>
-      <li class="nav-item"><a href="/problemStatement.html" class="nav-link px-2 text-muted">Problem Statement</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Mentors</a></li>
-    </ul>
-    <p class="text-center text-muted">© What The H*ck 2021 GDSC : LNCT</p>
-  </footer>
-</div>
-
-
-<!-- Other Scripts -->
-
-<!-- JQuery CDN  -->
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-
-<!-- Popper CDN -->
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-
-<!-- Bootstrap JS -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
-<!-- Main Script -->
-<script src="Code/js/main.js"></script>
-
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+    <script>
+        var snowflakes = new Snowflakes({
+            color: '#5ECDEF', // Default: "#5ECDEF"
+            container: document.querySelector('#snowflakes-container'), // Default: document.body
+            count: 70, // 100 snowflakes. Default: 50
+            minOpacity: 0.1, // From 0 to 1. Default: 0.6
+            maxOpacity: 0.95, // From 0 to 1. Default: 1
+            minSize: 10, // Default: 10
+            maxSize: 20, // Default: 25
+            rotation: true, // Default: true
+            speed: 0.7, // The property affects the speed of falling. Default: 1
+            wind: false, // Without wind. Default: true
+            width: 500, // Default: width of container
+            height: 500, // Default: height of container
+            zIndex: 100 // Default: 9999
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Main Script -->
+    <script src="./js/main.js"></script>
+  </body>
 </html>
