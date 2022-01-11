@@ -1,5 +1,5 @@
 body, html {
-    background-color: #000;
+    background-color: #121212;
     overflow-x: hidden;
 }
 
@@ -93,6 +93,10 @@ body, html {
 
 /* About Desktop */
 
+.about {
+    background-color: #131313;
+}
+
 .aboutSec {
     display: flex;
     flex-direction: row;
@@ -114,6 +118,7 @@ body, html {
     font: 6vh;
     color: rgb(89, 170, 218);
     text-align: center;
+    padding: 2rem;
 }
 
 .aboutPara {
@@ -132,7 +137,7 @@ body, html {
 }
 
 #layer1 {
-    background-color: #000;
+    background-color: #121212;
 }
 
 /* About Mobile */
@@ -150,5 +155,95 @@ body, html {
     }
     .aboutImg {
         width: 100%;
+    }
+}
+
+/* Tracks */
+
+.tracksSec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trackTitle {
+    color: white;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* gap: 2rem; */
+}
+
+.trackOne, .trackTwo, .trackThree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid aqua;
+    width: 20rem;
+    height: 50vh;
+    margin: 3rem;
+    cursor: pointer;
+    transition: ease-in-out 1.5s;
+    color: rgb(67, 137, 184);
+}
+
+.trackOne:hover {
+    background-color: aqua;
+    color: #000;
+    transition: ease-in-out 1.5s;
+    border-radius: 8px;
+}
+
+.trackTwo:hover {
+    background-color: aqua;
+    color: #000;
+    transition: ease-in-out 1.5s;
+    border-radius: 8px;
+}
+
+.trackThree:hover {
+    background-color: aqua;
+    color: #000;
+    transition: ease-in-out 1.5s;
+    border-radius: 8px;
+}
+
+.viewMore {
+    color: #000;
+    background-color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    transition: ease-in-out 1s;
+    cursor: pointer;
+}
+
+.viewMore:hover {
+    background-color: #000;
+    transition: ease-in-out 1s;
+    color: aqua;
+    border: 1px solid aqua;
+}
+
+.viewTitle {
+    font-weight: 400;
+}
+
+/* Track Mobile */
+
+@media screen and (max-width: 900px) {
+    .tracks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trackOne, .trackTwo, .trackThree {
+        height: 20vh;
+        margin: 1.5rem;
     }
 }
