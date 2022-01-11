@@ -7,7 +7,7 @@ var snowflakes = new Snowflakes({
     minSize: 20, 
     maxSize: 30, 
     rotation: true, 
-    speed: 0.7, 
+    speed: 1, 
     wind: false,
     width: 500, 
     height: 600, 

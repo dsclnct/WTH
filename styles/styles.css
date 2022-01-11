@@ -90,3 +90,32 @@ body, html {
         margin: 0;
     }
 }
+
+/* About Desktop */
+
+.aboutSec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* gap: 12rem; */
+}
+
+.aboutImg {
+    border-radius: 50%;
+    padding: 3rem;
+    width: 30rem;
+}
+
+.aboutTitle {
+    font: 6vh;
+    color: rgb(89, 170, 218);
+    text-align: center;
+}
+
+.aboutPara {
+    font-size: 3vh;
+    color: #f8f8f8;
+    width: 80%;
+    font-weight: 400;
+}
