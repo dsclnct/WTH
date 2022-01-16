@@ -121,7 +121,7 @@ body {
 
 @media screen and (max-width:900px) {
     .navLink {
-        margin-right: 17px;
+        margin-right: 10px;
     }
 .sponLogo {
     display: flex;
