@@ -15,7 +15,13 @@ body {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(27,27,27,1) 35%, rgba(85,85,85,1) 100%);
     scroll-behavior: smooth;
     overflow-x: hidden;
-    max-width: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width:900px) {
+    body {
+        width: 100%;
+    }
 }
 
 .btn {
@@ -109,6 +115,10 @@ body {
     justify-content: center;
 }
 
+.hideLogo {
+    display: none;
+}
+
 @media screen and (max-width:900px) {
     
 .sponLogo {
@@ -120,5 +130,13 @@ body {
 
 .slideshow-container {
     display: none;
+}
+
+.hide {
+    display:none;
+    padding: 20px;
+}
+.hideLogo {
+    display: block;
 }
 }
