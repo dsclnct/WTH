@@ -20,3 +20,11 @@ function showSlides() {
 
 
 console.log(123)
+
+$(document).ready(function() {
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	}, 3000);
+	
+});
